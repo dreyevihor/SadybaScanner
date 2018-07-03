@@ -1,38 +1,36 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 
+import { ScanpagePage } from '../scanpage/scanpage';
+
+
+/**
+ * Generated class for the HomePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
-	options: BarcodeScannerOptions;
-	encodText: string='';
-	encodedData: any={};
-	scannedData: any={};
+
+  username: string;
+  password: string;
+  token: any;
 
 
-  constructor(public navCtrl: NavController, public scanner: BarcodeScanner) {
-
-  }
-  scan(){
-  	this.options = {
-  		prompt: 'Scan you barcode'
-  	};
-  	this.scanner.scan().then((data) => { 
-  		this.scannedData = data;
-  	}, (err) => {
-  		console.log('Error :', err);
-  	})
-  }
-  encode(){
-  	this.scanner.encode(this.scanner.Encode.TEXT_TYPE, this.encodText).then((data) => {
-  		this.encodedData = data;
-  	}, (err) => {
-  		console.log('Error :', err);
-  	})
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  login(){
+  	
+  	
+  	this.navCtrl.push(ScanpagePage);
+  }
+ 
 }

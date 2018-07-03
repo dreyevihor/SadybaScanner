@@ -7,11 +7,13 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { ScanpagePage } from '../pages/scanpage/scanpage';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ScanpagePage,
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,9 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ScanpagePage,
+
   ],
   providers: [
     StatusBar,

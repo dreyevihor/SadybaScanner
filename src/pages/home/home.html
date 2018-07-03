@@ -1,24 +1,34 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
+
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Авторизація</ion-title>
   </ion-navbar>
+
 </ion-header>
 
+
 <ion-content padding>
-<div *ngIf="scannedData.text == 'resolve'" class="scanresult green" >
-	<label>Your barcode is</label>
-		<br>
-		<span>{{scannedData.text}}</span>
-</div>
-<div *ngIf="scannedData.text == 'reject'" class="scanresult red" >
-	<label>Your barcode is</label>
-		<br>
-		<span>{{scannedData.text}}</span>
-</div>
-<div class="scanbtn">
-	<button ion-button block (click)="scan()">SCAN</button>
-</div>
+<ion-list>
+
+  <ion-item>
+    <ion-label floating>Ваш логін</ion-label>
+    <ion-input type="text" [(ngModel)]="username" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Ваш пароль</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<button ion-button full (click)="login()">Ввійти</button>
+
+{{token}}
 </ion-content>
-	

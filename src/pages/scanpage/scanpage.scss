@@ -1,0 +1,28 @@
+page-scanpage {
+
+}
+.scanbtn{
+	position: absolute;
+	bottom: 4%;
+	height: 35%;
+	width: 90%;
+	box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+}
+.scanbtn button { 
+	height: 100%;
+	font-size: 1.3em;
+}
+
+.scanresult{
+	position: absolute;
+	width: 90%;
+	height: 55%;
+	border-radius: 4px;
+	box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+}
+.red{
+	background-color: #f72222;
+}
+.green{
+	background-color: #76e851;
+}
